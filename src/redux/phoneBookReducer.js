@@ -1,4 +1,8 @@
-import { addContact, deleteContact, fetchContacts } from 'servise/api';
+import {
+  addContact,
+  deleteContact,
+  fetchContacts,
+} from 'servise/api';
 
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
 
@@ -7,6 +11,8 @@ const INITIAL_STATE = {
   isLoading: false,
   error: null,
 };
+
+// CONTACTS
 
 export const fetchContactsThunk = createAsyncThunk(
   'contacts/fetch',

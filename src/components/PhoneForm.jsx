@@ -4,13 +4,13 @@ import css from "./PhoneBook.module.css"
 
 export const PhoneForm = ({handleAddNumber}) => {
   const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
+  const [number, setNumber] = useState('')
 
 
   const handleInput = (event) =>{
     switch(event.target.name){
       case "name": setName(event.target.value);break;
-      case "number": setPhone(event.target.value);break;
+      case "number": setNumber(event.target.value);break;
       default:
     }
   }
@@ -21,10 +21,10 @@ export const PhoneForm = ({handleAddNumber}) => {
         handleAddNumber({
           event,
           name,
-          phone,
+          number,
         });
         setName('')
-        setPhone('')
+        setNumber('')
       }}
     >
       <label>
@@ -47,7 +47,7 @@ export const PhoneForm = ({handleAddNumber}) => {
         className={css.input}
           type="tel"
           name="number"
-          value={phone}
+          value={number}
           onChange={handleInput}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
