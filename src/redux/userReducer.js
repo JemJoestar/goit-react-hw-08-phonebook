@@ -20,7 +20,6 @@ export const signupThunk = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const responce = await signUpUser(userData);
-      console.log(`responce:`, responce)
 
       return responce;
     } catch (e) {

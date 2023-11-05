@@ -45,8 +45,6 @@ const ContactPage = () => {
       });
       return;
     }
-    console.log(0);
-    console.log({ name, number });
     dispatch(addContactThunk({ name, number }));
   };
 

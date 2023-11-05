@@ -8,11 +8,9 @@ const userInstance = axios.create({
 });
 
 export const setToken = token => {
-  console.log(`Authorization:`, userInstance.defaults.headers.common.Authorization)
   
   userInstance.defaults.headers.common.Authorization = `Bearer ${token}`;
   
-  console.log(`Authorization:`, userInstance.defaults.headers.common.Authorization)
 };
 
 // USER
@@ -35,7 +33,6 @@ export const logOutUser = async () => {
 
 export const fetchUser = async () => {
   const {data} = await userInstance.get('/users/current')
-  console.log(`data:`, data)
   return data
 }
 
