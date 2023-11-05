@@ -7,7 +7,7 @@ const PublickRoute = ({ children, noLogin}) => {
   return !isLoggedIn && noLogin ? (
     children
   ) : (
-    <Navigate to="/contacts" />
+    <Navigate to="/contacts/" />
   );
 };
 

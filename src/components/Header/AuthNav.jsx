@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 const AuthNav = () => {
 
   return (
-    <div className='authNav'>
-      <NavLink to="/login">Log In</NavLink>
-      <NavLink to="/signup">Sign Up</NavLink>
+    <div className='navigation'>
+      <NavLink className="nav-link" to="/login">Log In</NavLink>
+      <NavLink className="nav-link" to="/signup">Sign Up</NavLink>
     </div>
   );
 };

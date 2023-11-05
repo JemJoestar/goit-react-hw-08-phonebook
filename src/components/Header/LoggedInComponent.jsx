@@ -10,7 +10,7 @@ const LoggedInComponent = () => {
         dispatch(logOutThunk())
       };
   return (
-    <div>
+    <div className='loggedin-welcome'>
         <p className='userName'>Hello, {userName}!</p>
       <button onClick={handleLogOut}>Log Out</button>
     </div>

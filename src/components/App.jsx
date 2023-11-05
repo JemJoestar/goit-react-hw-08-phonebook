@@ -15,6 +15,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
 import PublickRoute from './Routes/PublickRoute';
 import PrivateRoute from './Routes/PrivateRoute';
+import { Container } from './Container.styled';
 
 export const App = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -52,7 +53,7 @@ export const App = () => {
   }, [error, userError]);
 
   return (
-    <>
+    <Container>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -81,6 +82,6 @@ export const App = () => {
           }
         />
       </Routes>
-    </>
+    </Container>
   );
 };
